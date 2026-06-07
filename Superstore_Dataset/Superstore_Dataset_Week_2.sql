@@ -250,7 +250,7 @@ SELECT * FROM orders WHERE order_id = 'CA-2024-999999';
 -- BONUS: Business Queries (Assignment Step 6 & 7)
 -- ============================================================
 
--- Monthly Sales Trends
+--  Q28: Monthly Sales Trends
 SELECT 
     YEAR(order_date) AS year,
     MONTH(order_date) AS month,
@@ -260,26 +260,26 @@ FROM orders
 GROUP BY YEAR(order_date), MONTH(order_date)
 ORDER BY year, month;
 
--- Top 10 Customers by Total Spending
+-- Q29:Top 10 Customers by Total Spending
 SELECT TOP 10 c.customer_name, SUM(o.total_amount) AS total_spent
 FROM customers c
 JOIN orders o ON c.customer_id = o.customer_id
 GROUP BY c.customer_name
 ORDER BY total_spent DESC;
 
--- Find Duplicate Orders
+-- Q30:Find Duplicate Orders
 SELECT order_id, COUNT(*) AS count
 FROM orders
 GROUP BY order_id
 HAVING COUNT(*) > 1;
 
--- Row Count Validation
+-- Q31: Row Count Validation
 SELECT 'customers' AS table_name, COUNT(*) AS row_count FROM customers UNION ALL
 SELECT 'products', COUNT(*) FROM products UNION ALL
 SELECT 'orders', COUNT(*) FROM orders UNION ALL
 SELECT 'order_items', COUNT(*) FROM order_items;
 
--- Data Quality Check (NULL values)
+-- Q32: Data Quality Check (NULL values)
 SELECT 
     SUM(CASE WHEN customer_id IS NULL THEN 1 ELSE 0 END) AS null_customer_id,
     SUM(CASE WHEN order_date IS NULL THEN 1 ELSE 0 END) AS null_order_date,

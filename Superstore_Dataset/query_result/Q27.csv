@@ -1,0 +1,7 @@
+order_id,customer_id,order_date,ship_date,ship_mode,total_amount,status
+CA-2024-999999,AA-10315,Jun  7 2026 10:39PM,Jun  7 2026 10:39PM,Standard Class,1598,Pending
+CA-2024-999999,AA-10315,Jun  7 2026 10:41PM,Jun  7 2026 10:41PM,Standard Class,1598,Pending
+CA-2024-999999,AA-10315,Jun  7 2026 10:42PM,Jun  7 2026 10:42PM,Standard Class,1598,Pending
+CA-2024-999999,AA-10315,Jun  7 2026 10:45PM,Jun  7 2026 10:45PM,Standard Class,1598,Pending
+CA-2024-999999,AA-10315,Jun  7 2026 10:46PM,Jun  7 2026 10:46PM,Standard Class,1598,Pending
+CA-2024-999999,AA-10315,Jun  7 2026  5:53PM,Jun  7 2026  5:53PM,Standard Class,1598,Pending
